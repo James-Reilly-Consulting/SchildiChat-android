@@ -33,6 +33,7 @@ import de.spiritcroc.matrixsdk.util.Dimber
 import im.vector.app.AppStateHandler
 import im.vector.app.BuildConfig
 import im.vector.app.R
+import im.vector.app.SelectSpaceFrom
 import im.vector.app.core.di.MavericksAssistedViewModelFactory
 import im.vector.app.core.di.hiltMavericksViewModelFactory
 import im.vector.app.core.mvrx.runCatchingToAsync

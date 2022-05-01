@@ -24,6 +24,7 @@ import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import im.vector.app.AppStateHandler
 import im.vector.app.RoomGroupingMethod
+import im.vector.app.SelectSpaceFrom
 import im.vector.app.core.di.MavericksAssistedViewModelFactory
 import im.vector.app.core.di.hiltMavericksViewModelFactory
 import im.vector.app.core.extensions.singletonEntryPoint
@@ -225,7 +226,7 @@ class HomeDetailViewModel @AssistedInject constructor(
         appStateHandler.selectedRoomGroupingFlowIgnoreSwipe
                 .setOnEach {
                     copy(
-                            roomGroupingMethodIgnoreSwipe = it.orNull() ?: RoomGroupingMethod.BySpace(null)
+                            roomGroupingMethodIgnoreSwipe = it.orNull()
                     )
                 }
     }
