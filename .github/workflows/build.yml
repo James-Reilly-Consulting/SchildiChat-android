@@ -3,7 +3,7 @@ name: APK Build
 on:
   pull_request: { }
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, sc ]
 
 # Enrich gradle.properties for CI/CD
 env:
@@ -46,8 +46,8 @@ jobs:
   release:
     name: Build unsigned GPlay APKs
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    # Only runs on main, no concurrency.
+    if: github.ref == 'refs/heads/screlease'
+    # Only runs on scmain, no concurrency.
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
